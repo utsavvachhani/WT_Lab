@@ -1,0 +1,106 @@
+/* General */
+body{
+    background-color: white;
+}
+/* The emerging W3C standard
+   that is currently Firefox-only */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(173, 56, 56) white;
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+
+
+hr {
+    background-color: rgb(37, 35, 35);
+}
+
+iframe{
+    width: max(33.3vw, 324px);
+    height: max(22.7vw, 135px);
+}
+
+
+.shadowless {
+    box-shadow: none!important;
+}
+
+.code-tags span{
+    font-family: Consolas, monaco, monospace;
+    padding: 2px;
+    background-color: #b7e5c4;
+    background-color: whitesmoke;
+    margin-right: min(1vh, 1vw);
+}
+
+.my-highlight :hover{
+    background-color: whitesmoke;
+}
+
+
+/* Header */
+#my-title{
+    font-size: 3em;
+    text-align: center;
+}
+
+.my-header{
+    font-size: 1.5em;
+}
+
+
+/* Nav Bar */
+
+.my-nav a{
+    color: black;
+}
+
+.my-nav img{
+    height: min(10vh, 10vw);
+    width: min(10vh, 10vw);
+    position: relative;
+}
+
+.my-nav h2{
+    text-align: center;
+}
+
+.my-nav-content {
+    display: flex;
+    justify-content: center;
+}
+
+
+.my-nav-content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.my-nav-content li {
+    font-size: min(3h, 3vw);
+    float: left;
+}
+
+
+.my-nav-content li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.my-nav-content li a:hover {
+    background-color: whitesmoke;
+}
+
+.float-right {
+    float: right;
+}
