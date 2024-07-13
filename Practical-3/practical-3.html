@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design page using form tags</title>
+</head>
+<body>
+    <form method="post">
+        <fieldset>
+            <legend>Login now</legend>
+            <label>Please enter your User Name:</label>
+            <input type="text" name="name"><br><br>
+            <label>Your Password is:</label>
+            <input type="text" name="password"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Choices!</legend>
+            <label>Favourite Color:</label>
+            <input type="text" name="color" value="green"><br><br>
+            <label>My Favourite Fruite is:</label>
+            <select name="Fruite">
+                <option value="Apple">Apple</option>
+                <option value="Banana">Banana</option>
+                <option value="Orange">Orange</option>
+                <option value="Mango">Mango</option>
+                <option value="Other">Other</option>
+            </select><br><br>
+            <label>I live in a:</label>
+            <input type="radio" name="live" value="House" checked>
+            <label >House</label>      
+            <input type="radio" name="live" value="Flat">
+            <label >Flat</label>       
+            <input type="radio" name="live" value="Caravan">
+            <label >Caravan</label><br><br>
+            <label >My Favourite Sports are:</label>
+            <input type="checkbox" name="hobbies" value="cricket">
+            <label >Cricket</label>
+            <input type="checkbox" name="hobbies" value="Hockey">
+            <label >Hockey</label>
+            <input type="checkbox" name="hobbies" value="Football">
+            <label >Football</label>
+            <input type="checkbox" name="hobbies" value="Tennis">
+            <label >Tennis</label><br><br>
+            <label>My uploaded file is:</label>
+            <input type="submit" value="Choose file">
+            <label>No file chosen</label><br>
+        </fieldset>
+        <fieldset>
+            <legend>Leaving?</legend>
+           <label >You can leave a message for me here:</label>
+        <textarea name="message" rows="10" cols="70" required>Message:</textarea><br><br>
+
+        <input type="submit" value="Go!">
+        <input type="submit" value="Start Again">
+        </fieldset><br>
+
+    </form>
+</body>
+</html>
