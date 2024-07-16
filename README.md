@@ -4,13 +4,15 @@ Lab file of the Web Technologies Lab.
 webside : https://utsavvachhani.github.io/WT_Lab/
 
 
-Home page : 
-![Screenshot (152)](https://github.com/user-attachments/assets/d1da8496-1170-45e2-af1d-aa51b3c24049)
+**Home page : **
+![Screenshot (156)](https://github.com/user-attachments/assets/c33c3da0-af82-4db7-a0da-f406d54f0705)
+![Screenshot (159)](https://github.com/user-attachments/assets/af8d6602-9d0d-4f59-a2ac-3a85645186cf)
 
-![Screenshot (153)](https://github.com/user-attachments/assets/800ed695-7afe-4339-b2fe-cccf144225c9)
 
-Code :
-![Screenshot (154)](https://github.com/user-attachments/assets/0926943c-a91d-4dc4-ae2b-75a1b025bb6f)
+**
+Code :**
+![Screenshot (160)](https://github.com/user-attachments/assets/d11f8efc-12bc-4561-ba5d-a02823373a8f)
 
-Output(webpage);
-![Screenshot (155)](https://github.com/user-attachments/assets/36c7887b-582e-4bfd-ad6a-ad75e0aa055d)
+
+**Output(webpage):**
+![Screenshot (159)](https://github.com/user-attachments/assets/bbd4c4ab-bd32-4bda-b769-8f4f518fa217)
