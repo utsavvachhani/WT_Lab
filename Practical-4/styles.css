@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    background-color: rgb(48, 47, 47);
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+ul,li,a{
+    display: grid;
+    display: inline-flex;
+    padding: 10px;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+h2{
+    align-items: left;
+    text-align: left;
+    padding: 25px 25px 25px 0;
+    text-transform: uppercase;
+   
+}
+
+p{
+    background-color: linen;
+    padding: 25px;
+    border: 2px solid lightgrey;
+}
+
+#section2 p{
+    background-color: white;
+    border: none;
+    padding: 25px 25px 25px 0;
+}
