@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple CSS Variables Example</title>
+  <style>
+    :root {
+      --global-bg-color: rgb(91, 200, 236);
+      --global-text-color: darkblue;
+      --global-box-bg-color: white;
+      --global-box-text-color: black;
+      --h1-text-color: rgb(62, 10, 252);
+    }
+
+    body {
+      background-color: var(--global-bg-color);
+      color: var(--global-text-color);
+    }
+
+    h1{
+      color: var(--h1-text-color);
+    }
+    .local_box_1,.local_box_2,.global_box_1,.global_box_2 {
+      padding: 20px;
+      margin: 10px;
+    }
+    .local_box_1{
+      --box-bg-color: white;
+      --box-text-color: black;
+      background-color: var(--box-bg-color);
+      color: var(--box-text-color);
+    }
+    .local_box_2{
+      background-color: var(--box-bg-color);
+      color: var(--box-text-color);
+    }
+    .global_box_1{
+      background-color: var(--global-box-bg-color);
+      color: var(--global-box-text-color);
+    }
+    .global_box_2{
+      background-color: var(--global-box-bg-color);
+      color: var(--global-box-text-color);
+    }
+  </style>
+</head>
+<body>
+  <h1>Example of Local Variable.</h1>
+  <div class="local_box_1">
+    This is a box with local variables.
+  </div>
+  <div class="local_box_2">
+    This is another box with local variables.
+  </div>
+  <br>
+  <h1>Example of global Variable.</h1>
+  <div class="global_box_1">
+    This is a box with global variables.
+  </div>
+  <div class="global_box_2">
+    This is another box with global variables.
+  </div>
+</body>
+</html>

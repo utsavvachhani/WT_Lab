@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Variables with Pseudo-classes and Pseudo-elements</title>
+  <style>
+    :root {
+      --global-bg-color: lightblue;
+      --global-text-color: darkblue;
+    }
+
+    body {
+      background-color: var(--global-bg-color);
+      color: var(--global-text-color);
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      --box-bg-color: white;
+      --box-text-color: black;
+      background-color: var(--box-bg-color);
+      color: var(--box-text-color);
+      padding: 20px;
+      margin: 10px;
+      position: relative;
+    }
+
+    .box:hover {
+      background-color: var(--global-bg-color);
+      color: var(--global-text-color);
+    }
+
+    .box::before {
+      content: "Note: ";
+      font-weight: bold;
+      color: red;
+    }
+
+    .box::after {
+      content: " [End of Box]";
+      font-weight: bold;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    This is a box with local variables.
+  </div>
+  <div class="box">
+    This is another box with local variables.
+  </div>
+</body>
+</html>

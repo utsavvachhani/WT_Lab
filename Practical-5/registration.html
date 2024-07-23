@@ -1,0 +1,92 @@
+<!DOCTYPE html>  
+<html>  
+    <head> <title>Registration Page</title>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>  
+<style>  
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color:crimson ;
+            justify-content: center;    
+            align-items: center;
+            display: flex;
+        }
+        .container{
+            background-color: cornflowerblue;
+            padding: 30px;
+            margin: 10px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 10px;
+            color: black;
+            /* position: fixed; */
+        }
+        .container .l1{
+            padding: 10px;
+            margin: 6px ;
+            border-radius: 10px;
+            font-size: 15px;
+            border: 1px solid black;
+            background-color: crimson;
+            color: white;
+        }
+        ::placeholder{
+            color: white;
+        }
+        .s1{
+            padding: 10px;
+            margin: 6px ;
+            border-radius: 10px;
+            font-size: 13px;
+            border: 1px solid black;
+            background-color: crimson;
+            color: white;   
+        }
+        .container .btn
+        {
+            background-color: crimson;
+            padding: 12px;
+            margin: 10px 0 0 0;
+            border-radius: 10px;
+            border: 1px solid black;
+            color: white;
+            cursor: pointer;
+        } 
+</style>  
+</head>  
+<body>  
+<form action="prac5_4.html" method="post">  
+    <div class="container">  
+      <h1> Student Registeration Form</h1>
+ <hr> 
+<input type="text" placeholder="Enter Username" size="15" class="l1" required /> <br>
+
+<select  class="s1">  
+<option value="Course">Department</option>  
+<option value="BCA">IT</option>  
+<option value="BBA">CO</option>  
+<option value="B.Tech">CIVIL</option>   
+</select>  <br> 
+<label>   
+Gender :  
+</label> 
+<input type="radio" value="Male" name="gender"> Male   
+<input type="radio" value="Female" name="gender"> Female   
+<input type="radio" value="Other" name="gender" > Other  
+<br>  
+<input type="text" name="phone" placeholder="phone no." value="+91" size="10" class="l1" required>   
+<br>
+<textarea cols="50" rows="5" placeholder="Current Address" value="address" class="l1" required></textarea>
+<br>
+ <input type="text" placeholder="Enter Email-Id" name="email" class="l1" required>  <br>
+    <input type="password" placeholder="Enter Password" name="psw" class="l1" required>  <br>
+    <input type="password" placeholder="Retype Password" name="psw-repeat" class="l1" required> <br> 
+    <button type="submit" class="btn">Register</button>  
+  </div>  
+</form>  
+</body>  
+</html>
