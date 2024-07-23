@@ -1,92 +1,142 @@
-<!DOCTYPE html>  
-<html>  
-    <head> <title>Registration Page</title>
-        <meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>  
-<style>  
-        body{
+    <title>Registration Page</title>
+    <style>
+        :root{
+            --background-color: teal;
+            --font-color: black;
+            --form-color: aqua;
+        }
+        *{
             margin: 0;
             padding: 0;
-            height: 100%;
-            width: 100%;
-            background-color:crimson ;
-            justify-content: center;    
-            align-items: center;
-            display: flex;
         }
-        .container{
-            background-color: cornflowerblue;
-            padding: 30px;
-            margin: 10px;
-            text-align: center;
-            border: 2px solid black;
-            border-radius: 10px;
-            color: black;
-            /* position: fixed; */
-        }
-        .container .l1{
-            padding: 10px;
-            margin: 6px ;
-            border-radius: 10px;
-            font-size: 15px;
-            border: 1px solid black;
-            background-color: crimson;
-            color: white;
-        }
-        ::placeholder{
-            color: white;
-        }
-        .s1{
-            padding: 10px;
-            margin: 6px ;
-            border-radius: 10px;
-            font-size: 13px;
-            border: 1px solid black;
-            background-color: crimson;
-            color: white;   
-        }
-        .container .btn
-        {
-            background-color: crimson;
-            padding: 12px;
-            margin: 10px 0 0 0;
-            border-radius: 10px;
-            border: 1px solid black;
-            color: white;
-            cursor: pointer;
-        } 
-</style>  
-</head>  
-<body>  
-<form action="prac5_4.html" method="post">  
-    <div class="container">  
-      <h1> Student Registeration Form</h1>
- <hr> 
-<input type="text" placeholder="Enter Username" size="15" class="l1" required /> <br>
 
-<select  class="s1">  
-<option value="Course">Department</option>  
-<option value="BCA">IT</option>  
-<option value="BBA">CO</option>  
-<option value="B.Tech">CIVIL</option>   
-</select>  <br> 
-<label>   
-Gender :  
-</label> 
-<input type="radio" value="Male" name="gender"> Male   
-<input type="radio" value="Female" name="gender"> Female   
-<input type="radio" value="Other" name="gender" > Other  
-<br>  
-<input type="text" name="phone" placeholder="phone no." value="+91" size="10" class="l1" required>   
-<br>
-<textarea cols="50" rows="5" placeholder="Current Address" value="address" class="l1" required></textarea>
-<br>
- <input type="text" placeholder="Enter Email-Id" name="email" class="l1" required>  <br>
-    <input type="password" placeholder="Enter Password" name="psw" class="l1" required>  <br>
-    <input type="password" placeholder="Retype Password" name="psw-repeat" class="l1" required> <br> 
-    <button type="submit" class="btn">Register</button>  
-  </div>  
-</form>  
-</body>  
+        body{
+            background-color: var(--background-color);
+            padding: 50px;
+        }
+
+        h2{
+            text-align: center;
+            align-items: center;
+            color: var(--font-color);
+            padding: 20px;
+            font-size: 30px;
+            border-bottom: 2px solid var(--font-color);
+        }
+
+        div{
+            color: var(--font-color);
+            background-color: var(--form-color);
+            padding: 20px;
+        }
+
+        #name,#phone,#currentaddress,#email,#password{
+            width: 97%;
+            padding:15px;
+        }
+
+        #submit{
+            padding: 20px;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            margin: auto;
+            font-size: x-large;
+            width: 99.5%;
+            border-radius: none;
+            justify-content: center;
+            border: 2px solid var(--font-color);
+            background-color: var(--font-color);
+            color: var(--background-color);
+        }
+
+        .lab{
+            font-size: x-large;
+        }
+
+        #submit:hover{
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        input[type="text"],input[type="phone"],input[type="email"],input[id="course"]{
+            font-size: large;
+            background-color: linen;
+            border: none;
+        }
+        select{
+            padding: 15px;
+            background-color: linen;
+            font-size: large;
+        }
+        
+        .text{
+            background-color: linen;
+            font-size: x-large;
+            padding: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+    <h2>Registration Form</h2>
+    <form action="/student registration-form" method="post">
+        <br><label class="lab" for="name">Firstname:</label><br>
+        <br><input type="text" id="name" name="name" placeholder="Firstname" required><br><br>
+
+        <br><label class="lab" for="name">Middlename:</label><br>
+        <br><input type="text" id="name" name="name" placeholder="Middlename" required><br><br>
+
+        <br><label class="lab" for="name">Lastname:</label><br>
+        <br><input type="text" id="name" name="name" placeholder="Lastname" required><br><br>
+
+        <br><label class="lab" for="course">Department:</label><br>
+        <br><select name="course" id="course">
+            <option value="AI&DS">Artificial Intelligence and Data Science</option>
+            <option value="Ch_En">Chemical Engineering</option>
+            <option value="Ci_En">Civil Engineering</option>
+            <option value="CO">Computer Engineering</option>
+            <option value="EE">Electrical Engineering</option>
+            <option value="ECE">Electronics & Communication Engineering</option>
+            <option value="IT">Information Technology</option>
+            <option value="IC">Instrumentation and Control</option>
+            <option value="ME">Mechanical Engineering</option>
+            <option value="TT">Textile Technology</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <br><label class="lab" for="gender">Gender:</label><br>
+        <br><input type="radio" id="male" name="gender" value="male" checked>
+        <label class="lab" for="male">Male</label>      
+        <input type="radio" id="female" name="gender" value="female">
+        <label class="lab" for="female">Female</label>       
+        <input type="radio" id="other" name="gender" value="other">
+        <label class="lab" for="other">Other</label><br><br>
+
+        <br><label class="lab" for="phone">Phone:</label><br>
+        <br><input type="phone" id="phone" name="phone" placeholder="+91" required><br><br>
+
+        <br><label class="lab" for="currentaddress">Current Address:</label><br>
+        <br><textarea class="text" id="currentaddress" name="currentaddress" rows="6" cols="50" placeholder="Current Address" required></textarea><br><br>
+
+        <br><label class="lab" for="email">Email:</label><br>
+        <br><input type="email" id="email" name="email" placeholder="Enter Email"><br><br>
+
+        <br><label class="lab" for="password">Password:</label><br>
+        <br><input type="text" id="password" name="password" min="18" max="100" placeholder="Enter Password"><br><br>
+
+        <br><label class="lab" for="password">Re-type Password:</label><br>
+        <br><input type="text" id="password" name="password" min="18" max="100" placeholder="Retype Password"><br><br>
+
+        <br><input type="submit" value="Submit" id="submit"><br>
+    
+    </form>
+    </div>
+</body>
 </html>
