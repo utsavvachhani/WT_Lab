@@ -1,12 +1,18 @@
 /* General */
 body{
-    background-color: #e6e2d3;
+    background-color: #a9e7dd;
 }
 /* The emerging W3C standard
    that is currently Firefox-only */
 * {
     scrollbar-width: thin;
     scrollbar-color: rgb(173, 56, 56) white;
+}
+
+
+:root{
+    --background-color: #357d83;
+    --text-color: rgb(255, 255, 255);
 }
 
 /* Works on Chrome/Edge/Safari */
@@ -124,24 +130,24 @@ iframe{
     background-color:rgb(49, 139, 112);
 }
 
-
+/* box inside text color */
 .container #projects .row .col .card-action a{
-    color: rgb(255, 255, 255);
+    color: var(--text-color);
     font-size: 15px;
 }
 
 
 .container #projects .row .col .card-action a:hover{
-    color: rgb(0, 0, 0);
+    color: rgb(175, 164, 164);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .container #projects .row .col .card{
-    background-color: #c4b7a6;
+    background-color: var(--background-color);
 }
 
 .container #projects .row .col .card .card-content h6{
     font-family: sans-serif;
-    color: #50394c;
+    color: var(--text-color);
     font-size: 15px;
 }
