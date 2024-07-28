@@ -6,13 +6,43 @@
 
     <body>
         <div class="center">
-            <button><a href="home.html">Home</a></button>          
+            <a href="home.html"><h1>Home</h1></a>     
         </div>
     </body>
     <style>
-        .center{
-            margin: 10px 0% 50% 0%;
-            display: grid;
+        body{
+            background-color: bisque;
+            background-image: url(./Practical-2/Photos-Video/logo_utsav_vachhani.png);
         }
-    </style>
+        :root{
+            --background-color: rgb(11, 1, 27);
+            --text-color: rgb(255, 255, 255);
+        }
+        .center{
+            display: grid;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            position: absolute;
+            height: 50vh;
+            width: 50vw;
+            border: 1vh solid var(--text-color);
+            border-radius: 3vh;
+            background-color: var(--background-color);
+            text-align: center;
+            align-items: center;
+            size: 100px;
+        }
+        a{
+            color: var(--text-color);
+            text-decoration: none;
+        }
+        .center:hover{
+            background-color: var(--text-color);
+            border: 1vh solid var(--background-color);
+        }
+        .center:hover a{
+            color: var(--background-color);
+        }
+        </style>
 </html>
