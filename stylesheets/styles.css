@@ -13,6 +13,7 @@ body{
 :root{
     --background-color: #357d83;
     --text-color: rgb(255, 255, 255);
+    --button-hover-color: #ca9d86;
 }
 
 /* Works on Chrome/Edge/Safari */
@@ -127,13 +128,14 @@ iframe{
     color: white;
 }
 .buttonClick:hover{
-    background-color:rgb(49, 139, 112);
+    background-color:var(--button-hover-color);
 }
 
 /* box inside text color */
 .container #projects .row .col .card-action a{
     color: var(--text-color);
-    font-size: 15px;
+    font-size: 19px;
+    font-family: serif;
 }
 
 
@@ -147,7 +149,7 @@ iframe{
 }
 
 .container #projects .row .col .card .card-content h6{
-    font-family: sans-serif;
+    font-family: monospace;
     color: var(--text-color);
-    font-size: 15px;
+    font-size: 18px;
 }
