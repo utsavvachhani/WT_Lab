@@ -5,9 +5,8 @@ webside : https://utsavvachhani.github.io/WT_Lab/
 
 
 Home page : 
-![Screenshot (166)](https://github.com/user-attachments/assets/bbd0f576-76aa-49e8-8cb1-edc87c812c6e)
-![Screenshot (167)](https://github.com/user-attachments/assets/be766c22-389d-4aad-bcc6-79a61b8aaeab)
-
+![Screenshot (174)](https://github.com/user-attachments/assets/7ceb3f80-9a4d-45dd-ab53-cf3ff296fe1b)
+![Screenshot (173)](https://github.com/user-attachments/assets/bb64b9fe-c25d-4a4b-9926-20861afb369e)
 
 Code :
 ![Screenshot (160)](https://github.com/user-attachments/assets/d11f8efc-12bc-4561-ba5d-a02823373a8f)
