@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Age</title>
+    <script>
+        function calculateAge(){
+            // Get the values from the input fields
+            const dobInput = document.getElementById('birthdate').value;
+            // const currentDateInput = document.getElementById('cdate').value;
+            
+            // create a new `Date` object
+            const now = new Date();
+
+            // get the current date and time as a string
+            const currentDateInput = now.toLocaleString();
+            
+            // Validate if both dates are provided
+            if (!dobInput || !currentDateInput) {
+                alert('Please enter both Date of Birth and Current Date.');
+                return;
+            }
+    
+            // Convert input values to Date objects
+            const dob = new Date(dobInput);
+            const currentDate = new Date(currentDateInput);
+    
+            // Calculate age
+            let age = currentDate.getFullYear() - dob.getFullYear();
+            const monthDifference = currentDate.getMonth() - dob.getMonth();
+    
+            // Adjust age if the birthday hasn't occurred yet this year
+            if (monthDifference < 0 || (monthDifference === 0 && currentDate.getDate() < dob.getDate())) {
+                age--;
+            }
+    
+            // Display the result
+            alert(`Your age is ${age} years.`);
+        }
+    </script>
+        <style>
+            body{
+                align-items: center;
+                text-align: center;
+                background-color: aquamarine;
+            }
+            .container{
+                height: 40vh;
+                width: 40vw;
+                background-color: bisque;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                position: absolute;
+                border: 2px solid black;
+                border-radius: 50px;
+                padding: 30px;
+            }
+            h4{
+                font-size: 2vw;
+            }
+            h3{
+                font-size: 1.5vw;
+            }
+            input{
+                width: 40%;
+                border-radius: 3px;
+                background-color: white;
+            }
+            button{
+                width: 80%;
+                height: fit-content;
+                padding: 3px;
+                margin-top: 4vh;
+                border-radius: 5vw;
+                font-size: calc(1.5vw + 1.5vh);
+                background-color: aquamarine;
+            }
+            button:hover{
+                background-color: aqua;
+            }
+            @media screen and (max-width: 1000px) {
+                body{
+                    font-size: 10px;
+                }
+            }
+        </style>
+    <style>
+        body{
+            align-items: center;
+            text-align: center;
+            background-color: aquamarine;
+        }
+        .container{
+            height: 40vh;
+            width: 40vw;
+            background-color: bisque;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            position: absolute;
+            border: 2px solid black;
+            border-radius: 50px;
+            padding: 30px;
+        }
+        h4{
+            font-size: 2vw;
+        }
+        h3{
+            font-size: 1.5vw;
+        }
+        input{
+            width: 40%;
+            border-radius: 3px;
+            background-color: white;
+        }
+        button{
+            width: 80%;
+            height: fit-content;
+            padding: 3px;
+            margin-top: 4vh;
+            border-radius: 5vw;
+            font-size: calc(1.5vw + 1.5vh);
+            background-color: aquamarine;
+        }
+        button:hover{
+            background-color: aqua;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        @media screen and (max-width: 1000px) {
+            body{
+                font-size: 10px;
+            }
+        }
+    </style>    
+</head>
+<body>
+    <div class="container">
+        <h4>Hey Welcome to here : </h4>
+        <div class="text">
+            <h3>Enter the BirthDate : </h3>
+        </div>
+        <input type="date" id="birthdate">
+        <button onclick="calculateAge()">Submit</button>
+    </div>
+</body>
+</html>
