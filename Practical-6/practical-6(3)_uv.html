@@ -38,8 +38,24 @@
         .buttons button{
             background-color: rgb(117, 218, 243);
             border: 2px black solid;
-            font-size: 20px;
+            font-size: 22px;
+            font-family: bold;
             flex-direction: row;
+            margin-left: 15px;
+            border-radius: 5px;
+        }
+        h{
+            margin: 3px;
+        }
+        button:hover{
+            background-color: black;
+            color: azure;
+        }
+        @media screen and (max-width: 1000px) {
+            .buttons button{
+                flex-direction: column;
+                margin-top: 6px;
+            }
         }
     </style>
 </head>
