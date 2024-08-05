@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo of Box</title>
+    <script>
+        function alrtfunction(){
+            alert("This Is alrt Box!");
+        }
+        function confirmfunction(){
+            var retVal = confirm("Do You Want To Proceed ? ");
+
+            if ( retVal == true ) 	// User has clicked OK
+            {
+                alert("You Procced OK!");
+            }
+            else
+            {
+                alert("You haven't Procced CANCEL..");
+            }
+        }
+        function  promptfunction(){
+            var retStr = prompt("Enter Your Name.. ","utsav");
+            alert("Hello  " + retStr + "   !!!");
+        }
+    </script>
+    <style>
+        body{
+            align-items: center;
+            text-align: center;
+            margin: 10%;
+        }
+        .buttons{
+            margin: 0% 20%;
+            
+        }
+        .buttons button{
+            background-color: rgb(117, 218, 243);
+            border: 2px black solid;
+            font-size: 20px;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <h1>Practical Assignment Number 6 : Program number 3 : Dialog Boxes</h1>
+    <div class="buttons">
+        <button value="" onclick="alrtfunction()"><h>Alert Dialog Box</h></button>
+        <button value="" onclick="confirmfunction()"><h>Confirm Dialog Box</h></button>
+        <button value="" onclick="promptfunction()"><h>Prompt Dialog Box</h></button>
+    </div>
+</body>
+</html>

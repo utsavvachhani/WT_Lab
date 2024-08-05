@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local and global variables</title>
+</head>
+<body>
+    <script>
+        // Global variable
+        var globalVar = "I'm a global variable!";
+      
+        function myFunction() {
+            // Local variable
+          var localVar = "I'm a local variable!";
+      
+          // Accessing both variables
+          document.write(globalVar + "<br>");
+          document.write(localVar + "<br>");
+        }
+
+        document.write("<br>This is Write inside the Function : <br>"); 
+        myFunction();
+        
+        // Attempting to access local variable outside the function
+            document.write("<br>This is Write outside the Function : "); 
+            document.write("<br>"+globalVar + "<br>");
+            document.write("Local variable : "+localVar); // This will cause an error
+        </script>
+</body>
+</html>
