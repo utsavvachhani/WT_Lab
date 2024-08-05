@@ -4,11 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prime Number</title>
+    <script>
+       function isPrime(num) {
+           if (num <= 1) return false; // Numbers less than or equal to 1 are not prime
+           for (let i = 2; i < num; i++) {
+               if (num % i === 0) {
+                   return false; // If num is divisible by any number other than 1 and itself
+               }
+           }
+           return true; // If no divisors were found, num is a prime number
+        }
+        function primeNumber(num){
+            const result = isPrime(num);
+            if(result){
+                alert(`here, {$num} is Prime Number `);
+            }
+            else{
+                alert(`here, {$num} isn't Prime Number `);
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h4>Hey Welcome to here : </h4>
-        <h3>Select the number which you went to find out the It's Prime Or Not ?</h3>
+        <div class="text">
+            <h3>Select the number which you went to find out the It's Prime Or Not ?</h3>
+        </div>
+        <input type="number" id="number" value="2">
+        <br>
+        <button onclick="primeNumber(number)" >Submit</button>
     </div>
 </body>
 </html>
