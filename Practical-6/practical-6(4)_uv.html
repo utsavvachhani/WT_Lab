@@ -14,16 +14,59 @@
            }
            return true; // If no divisors were found, num is a prime number
         }
-        function primeNumber(num){
+        function primeNumber(){
+            const num=document.getElementById("number").value;
             const result = isPrime(num);
             if(result){
-                alert(`here, {$num} is Prime Number `);
+                alert(`${num} is Prime Number.`);
             }
             else{
-                alert(`here, {$num} isn't Prime Number `);
+                alert(`${num} isn't Prime Number `);
             }
         }
     </script>
+    <style>
+        body{
+            align-items: center;
+            text-align: center;
+            background-color: aquamarine;
+        }
+        .container{
+            height: 40vh;
+            width: 40vw;
+            background-color: bisque;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            position: absolute;
+            border: 2px solid black;
+            border-radius: 50px;
+            padding: 30px;
+        }
+        h4{
+            font-size: 2vw;
+        }
+        h3{
+            font-size: 1.5vw;
+        }
+        input{
+            width: 40%;
+            border-radius: 3px;
+            background-color: white;
+        }
+        button{
+            width: 80%;
+            height: fit-content;
+            padding: 3px;
+            margin-top: 4vh;
+            border-radius: 5vw;
+            font-size: 1.5vw;
+            background-color: aquamarine;
+        }
+        button:hover{
+            background-color: aqua;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -33,7 +76,7 @@
         </div>
         <input type="number" id="number" value="2">
         <br>
-        <button onclick="primeNumber(number)" >Submit</button>
+        <button onclick="primeNumber()" >Submit</button>
     </div>
 </body>
 </html>
