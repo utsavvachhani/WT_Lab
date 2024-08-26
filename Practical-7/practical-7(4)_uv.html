@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Resize & Reposition</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #resizeButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="resizeButton">Click to Resize & Reposition</button>
+
+    <script>
+        document.getElementById("resizeButton").addEventListener("click", function() {
+            // Set the new width and height for the window
+            const newWidth = 800;
+            const newHeight = 600;
+
+            // Set the new position for the window (x and y coordinates)
+            const newPositionX = 100;
+            const newPositionY = 100;
+
+            // Resize the window
+            window.resizeTo(newWidth, newHeight);
+
+            // Reposition the window
+            window.moveTo(newPositionX, newPositionY);
+        });
+    </script>
+</body>
+</html>

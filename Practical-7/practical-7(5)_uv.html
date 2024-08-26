@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Control</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        @media screen and (max-width:750px) {
+            body{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <button id="openWindow">OPEN NEW WINDOW</button>
+        <button id="closeChildWindow" disabled>CLOSE CHILD WINDOW</button>
+        <button id="closeMainWindow">CLOSE MAIN WINDOW</button>
+    </div>
+
+    <script>
+        let childWindow;
+
+        document.getElementById("openWindow").addEventListener("click", function() {
+            childWindow = window.open('', '', 'width=400,height=400');
+            childWindow.document.write('<h1>This is the child window!</h1>');
+            childWindow.document.body.style.fontFamily = 'Arial, sans-serif';
+            childWindow.document.body.style.display = 'flex';
+            childWindow.document.body.style.justifyContent = 'center';
+            childWindow.document.body.style.alignItems = 'center';
+            childWindow.document.body.style.height = '100vh';
+            childWindow.document.body.style.margin = '0';
+
+            // Enable the "CLOSE CHILD WINDOW" button once the child window is open
+            document.getElementById("closeChildWindow").disabled = false;
+        });
+
+        document.getElementById("closeChildWindow").addEventListener("click", function() {
+            if (childWindow && !childWindow.closed) {
+                childWindow.close();
+                document.getElementById("closeChildWindow").disabled = true;
+            }
+        });
+
+        document.getElementById("closeMainWindow").addEventListener("click", function() {
+            window.close();
+        });
+    </script>
+</body>
+</html>

@@ -1,56 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../stylesheets/styles.css">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
     <title>Scrolling Message</title>
     <style>
-        #footer {
-            width: 100%;
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        footer {
             position: fixed;
             bottom: 0;
-            background-color: #333;
-            color: white;
+            width: 100%;
+            background-color: #000000;
+            color: #fff;
             text-align: center;
-            padding: 10px;
-            overflow: hidden;
-            white-space: nowrap;
+            padding: 10px 0;
+            font-size: 14px;
         }
     </style>
 </head>
+
 <body>
+
     <footer id="footer"></footer>
-
+    
     <script>
-        const message = "This is a scrolling message. ";
-        const speed = 200; // Speed of scrolling in milliseconds
+        const message = "This is a scrolling message... and I am From IT Depratment,SCET,Surat......!!  ";
+        let index = 0;
 
-        function scrollStatusMessage() {
-            let i = 0;
+        function scrollMessage() {
+            const footer = document.getElementById("footer");
+            footer.textContent = message.substring(index, message.length) + message.substring(0, index);
 
-            function scroll() {
-                if (window.statusbar.visible) {
-                    window.status = message.substring(i, message.length) + message.substring(0, i);
-                } else {
-                    const footer = document.getElementById("footer");
-                    footer.textContent = message.substring(i, message.length) + message.substring(0, i);
-                }
-
-                i = (i + 1) % message.length;
-                setTimeout(scroll, speed);
-            }
-
-            scroll();
+            index = (index + 1) % message.length;
+            setTimeout(scrollMessage, 200); // Adjust speed by changing the timeout value
         }
 
-        window.onload = scrollStatusMessage;
+        scrollMessage();
     </script>
+
 </body>
+
 </html>
