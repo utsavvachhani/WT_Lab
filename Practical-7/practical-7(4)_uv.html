@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Window Resize & Reposition</title>
+    <title>Window</title>
     <style>
         body {
             display: flex;
@@ -11,35 +12,26 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
         }
 
-        #resizeButton {
+        button {
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
         }
     </style>
 </head>
+
 <body>
-    <button id="resizeButton">Click to Resize & Reposition</button>
-
+    <button id="openPopup">Popup</button>
     <script>
-        document.getElementById("resizeButton").addEventListener("click", function() {
-            // Set the new width and height for the window
-            const newWidth = 800;
-            const newHeight = 600;
+        document.getElementById('openPopup').addEventListener('click', function () {
 
-            // Set the new position for the window (x and y coordinates)
-            const newPositionX = 100;
-            const newPositionY = 100;
-
-            // Resize the window
-            window.resizeTo(newWidth, newHeight);
-
-            // Reposition the window
-            window.moveTo(newPositionX, newPositionY);
+            let popup = window.open('', 'popup', 'width=400,height=300');
+            popup.document.write('<!DOCTYPE html><html><head><title>Popup</title></head><body><button id="resizeButton">Resize and Move</button><script>document.getElementById("resizeButton").addEventListener("click", function() { window.resizeTo(800, 600); window.moveTo(100, 100); });<\/script></body></html>');
         });
     </script>
 </body>
+
 </html>
