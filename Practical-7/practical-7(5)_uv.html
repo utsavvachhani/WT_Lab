@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Window Control</title>
     <style>
+        :root{
+            --bg-color:#a9e7dd;
+            --bt-color: #4ed1bb;
+            --bt-text-color: #000000;
+        }
         body {
             display: flex;
             flex-direction: row;
@@ -13,6 +18,7 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
         }
 
         button {
@@ -20,11 +26,20 @@
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
+            background-color: var(--bt-color);
+            color: var(--bt-text-color);
+        }
+        button:hover{
+            background-color: var(--bt-text-color);
+            color: var(--bt-color);
+            transition: 1s;
         }
         @media screen and (max-width:750px) {
             body{
                 flex-direction: column;
                 margin-left: 10%;
+                justify-content: center;
+                align-items: center;
             }
         }
     </style>
