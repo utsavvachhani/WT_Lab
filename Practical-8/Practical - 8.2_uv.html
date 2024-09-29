@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PRACTICAL 8.2</title>
+    <style>
+        #pic {
+            height: 450px;
+            width: 450px;
+            margin: 30px;
+            margin-left:450px;
+            margin-top: 100px; 
+            border: 1px solid black;
+            transition: transform 2s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="CENTER">javascript program to rotate images</h1>
+    <img src="https://utsavvachhani.github.io/WT_Lab/extra/scet-logo.jpg" id="pic" alt="Welcome to Sarvajanik College of Engineering And Technology"><br>
+</body>
+    <script type="text/javascript">
+        let photo = document.querySelector("#pic");
+        photo.addEventListener("mouseover",function(event){ 
+            photo.style.transform = 'rotate(360deg)';
+            });
+        photo.addEventListener("mouseout",function(event){ 
+        photo.style.transform = 'rotate(0deg)';
+        });
+    </script>
+</html>

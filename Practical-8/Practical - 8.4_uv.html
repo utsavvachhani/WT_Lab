@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PRACTICAL 8.4</title>
+    <style>
+        fieldset .fir{
+            display: inline;
+            padding: 55px;
+        }
+        
+        header {
+            border: 1px solid black;
+        }
+        #but {
+            margin: 33px;
+            margin-left: 680px;
+        }
+        p {
+            margin:33px;
+            margin-top: 0%;
+        }
+        #sec {
+            margin: 55px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 align="CENTER">Choose The Background and The Foreground Color</h1>
+        <form>
+            <fieldset align="CENTER">
+                <legend>Color Pallete:</legend>
+
+                <div class="fir">
+                    <label for="backc"><b>Background Color: </b></label>
+                    <select name="backc" id="ba">
+                        <option value="Red">Red</option>
+                        <option value="Purple">Purple</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="aqua">Aqua</option>
+                        <option value="beige">Beige</option>
+                    </select>
+                    </div>
+                    
+                    <div class="fir">
+                    <label for="forec"><b>Foreground Color: </b></label>
+                    <select name="forec" id="fo">
+                        <option value="Yellow">Yellow</option>
+                        <option value="White">White</option>
+                        <option value="black">Black</option>
+                        <option value="Pink">Pink</option>
+                        <option value="Darkblue">Darkblue</option>
+                    </select>
+                    </div>
+            </fieldset>
+        </form>
+    </header>
+
+    <h1 align="CENTER" id="sec">Select object to change the background and foreground color of the current page</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic esse deleniti, corrupti nisi dolores non quis doloribus tempora pariatur atque qui animi? Magnam aliquam dolore aperiam sed facere voluptatibus, perferendis minus illum rerum excepturi consequatur unde quos porro cumque distinctio soluta quas obcaecati veritatis, incidunt ratione sunt, totam repellat non? Adipisci, necessitatibus labore illo expedita aliquid a! Atque similique sunt et at doloremque consequatur aut iste odio quod veritatis labore, maxime suscipit magni consequuntur, officia quidem vero? Velit molestiae accusantium voluptatibus maiores veritatis quia fuga asperiores consequuntur qui labore fugiat officia alias, ex consectetur distinctio magni enim neque saepe culpa adipisci corporis aspernatur assumenda quibusdam. Dicta maxime quibusdam ad ipsa veritatis!</p>
+</body>
+    <script>
+        var ba = document.getElementById("ba");
+        var fo = document.getElementById("fo");
+
+        ba.addEventListener('change',function(event){
+            document.body.style.backgroundColor = this.value;
+        });
+        fo.addEventListener('change',function(event){
+            document.body.style.color = this.value;
+        });
+        
+     
+    </script>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PRACTICAL 8.1</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        tr{
+            background-color: rgb(182, 163, 163);
+            border: 7px solid rgb(255, 255, 255);
+        }
+        th{
+            width: 155px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Browser Details</h1><br>
+    <table>
+        <tr>
+            <th>User Agent:</th>
+            <td id="d11"></td>
+        </tr>
+        <tr>
+            <th>Platform:</th>
+            <td id="d8"></td>
+        </tr>
+        <tr>
+            <th>Language:</th>
+            <td id="d9"></td>
+        </tr>
+        <tr>
+            <th>Online Status:</th>
+            <td id="d10"></td>
+        </tr>
+        <tr>
+            <th>Cookies Enabled:</th>
+            <td id="d7"></td>
+        </tr>
+        <tr>
+            <th>Screen Width:</th>
+            <td id="d1"></td>
+        </tr>
+        <tr>
+            <th>Screen Height:</th>
+            <td id="d2"></td>
+        </tr>
+        <tr>
+            <th>Window Width:</th>
+            <td id="d3"></td>
+        </tr>
+        <tr>
+            <th>Window Height:</th>
+            <td id="d4"></td>
+        </tr>
+        <tr>
+            <th>Color Depth:</th>
+            <td id="d5"></td>
+        </tr>
+        <tr>
+            <th>Timezone:</th>
+            <td id="d6"></td>
+        </tr>
+    </table>
+
+    <script>
+        document.getElementById("d1").innerHTML= screen.width + "px";
+        document.getElementById("d2").innerHTML= screen.height + "px";
+        document.getElementById("d3").innerHTML= window.innerWidth + "px";
+        document.getElementById("d4").innerHTML= window.innerHeight + "px";     
+        document.getElementById("d5").innerHTML= screen.colorDepth;
+        document.getElementById("d6").innerHTML= Intl.DateTimeFormat().resolvedOptions().timeZone;
+        document.getElementById("d7").innerHTML= navigator.cookieEnabled;
+        document.getElementById("d8").innerHTML= navigator.platform;
+        document.getElementById("d9").innerHTML= navigator.language;
+        if(navigator.onLine){    
+        document.getElementById("d10").innerHTML= "Online";
+        }
+        else{
+            document.getElementById("d10").innerHTML= "Offline";
+        }
+        document.getElementById("d11").innerHTML= navigator.appCodeName + "/" +navigator.appVersion;
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PRACTICAL 8.5</title>
+    <style>
+         :root{
+            --font-size:30px;
+            --text-size: 20px;
+            --box-hight: 400px;
+            --box-width: 400px;
+            --background: rgb(214, 171, 163);
+            --text-color: black; 
+        }
+        body{
+            background-color: teal; 
+        }
+        .box{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            position: absolute;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .form{
+            background-color: aqua;
+            border-radius: 40px;
+            align-items: center;
+            text-align: center;
+            width: var(--box-width);
+            height: var(--box-hight);
+            padding-top: 30px;
+            font-size: var(--text-size);
+        }
+        h1{
+            font-size: var(--font-size);
+        }
+        .label_text{
+            margin: 20px;
+        }
+        .remeber-forgrt{
+            align-self: start;
+            font-size: 15px;
+            justify-content: space-between;
+        }
+        .remeber-forgrt a{
+            margin-left: 28%;
+        }
+        button{
+            width: 80%;
+            height: 10%;
+            border: 5% black solid;
+            border-radius: 10px;
+            text-align: center;
+            color: var(--background);
+            background-color: var(--text-color);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: medium;
+        }
+        button:hover{
+            color: var(--text-color);
+            background-color: var(--background);
+        }
+        input{
+            background-color: rgb(186, 240, 217);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="CENTER" style="color: aliceblue;">Validation Demonstration</h1>
+    <div class="box">
+        <form class="form" name="myform" onsubmit="validate()" >
+            <h1 style="margin: 10%;">Sign In</h1>
+            <label for="ide" class="label_text">username : </label>
+            <input type="text" name="ide" value="" class="input_text" placeholder="Enter the username" id="user">
+            <br>
+            <br>
+            <label for="pass" class="label_text">password :</label>
+            <input type="password" class="input_text" name="pass" value="" placeholder="Password" id="pas">
+            <br>
+            <br>
+            <div class="remeber-forgrt">
+                <input type="radio" form="radiobutton">
+                <label for="radiobutton">Remeber Me</label>
+                <a href="https://utsavvachhani.github.io/WT_Lab//extra/forget.html">Forget Password</a>
+            </div>
+            <br>
+            <button>Sign In</button>
+            <br>
+            <h5>Don't have Account?  <a href="https://utsavvachhani.github.io/WT_Lab/Practical-5/registration.html">Sign Up</a></h5>
+        </form>    
+    </div>
+    <script>
+
+        function validate(){
+            
+        var user = document.getElementById('user').value;
+        var pass = document.getElementById('pas').value;
+
+            if(user==" "){
+                alert("Please Provide Your UserID !!!");
+                document.myform.ide.focus();
+                return false;
+            }
+
+            if(pass==" "){
+                alert("Please Provide Your Password !!!");
+                document.myform.pass.focus(); 
+                return false;
+            }
+
+            let regrexu = /^[0-9]{10}$/;
+            let result = regrexu.test(user);
+            if(result){
+                alert("Correct UserID");
+            }
+            else{
+                alert("Incorrect id");
+            }
+
+            let regrexp = /^(?=.*[A-Z])(?=.*[@#$%^&-+=().])(?=.*[a-z]).{8,20}$/;;
+            result = regrexp.test(pass);
+            if(result){
+                alert("Correct Password");
+            }
+            else{
+                alert("Incorrect Password");
+            } 
+        }
+
+
+
+    </script>
+</body>
+</html>
