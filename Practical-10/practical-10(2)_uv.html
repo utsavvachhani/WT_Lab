@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Input Form</title>
+</head>
+<body>
+    <h1>User Input Form</h1>
+    <form method="post" action="display.php">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br><br>
+
+        <label>Interests:</label><br>
+        <input type="checkbox" name="interests[]" value="Sports"> Sports<br>
+        <input type="checkbox" name="interests[]" value="Music"> Music<br>
+        <input type="checkbox" name="interests[]" value="Travel"> Travel<br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="Male" required> Male<br>
+        <input type="radio" name="gender" value="Female"> Female<br><br>
+
+        <label for="country">Country:</label>
+        <select name="country" required>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+            <option value="Australia">Australia</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
